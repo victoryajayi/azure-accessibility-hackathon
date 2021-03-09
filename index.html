@@ -41,6 +41,34 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>    
+
+
+
+									<!-- <h1>Geolocation Menu</h1> -->
+									<!-- <section id="geolocation"> -->
+											<!-- <div class="icon"> -->
+                        <p id="latitude"> 
+													<p id="longitude"></p>
+													</p>
+													<button onclick="getLocation()">Click for your location</button>
+													<script>
+														var x = document.getElementById("geolocation");
+														
+														function getLocation() {
+															if (navigator.geolocation) {
+															navigator.geolocation.getCurrentPosition(showPosition);
+															} else { 
+															x.innerHTML = "Geolocation is not supported by this browser.";
+															}
+														}
+														
+														function showPosition(position) {
+														
+															document.getElementById("latitude").innerHTML = 'Latitude: ' + position.coords.latitude; 
+															document.getElementById("longitude").innerHTML = 'Longitude: ' + position.coords.longitude;
+														}
+													</script>
+													</p>
       </main>
     
       <footer class="text-white-50">

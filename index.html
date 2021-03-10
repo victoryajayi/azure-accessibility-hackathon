@@ -38,7 +38,7 @@
             </div>
           
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" id="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>    
       </main>
@@ -48,4 +48,27 @@
       </footer>
     </div>
   </body>
+  <script>
+  const azureURL = 'https://accessibledirections.azurewebsites.net/api/dirAPI';
+  let startAddress = '40.7105199,-74.0084579';
+  let endAddress = '40.7124735,-74.0065084';
+  const directionsAPI = azureURL + '?startAddress=' + startAddress + '&endAddress' + endAddress; 
+  const submitButton = document.getElementById('submit');
+  
+  submitButton.onclick = getDirections();
+
+  function getDirections(e) {
+    fetch(directionsAPI, {
+    method: "GET",
+    contentType: "application/json"
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}  
+  </script>
 </html>

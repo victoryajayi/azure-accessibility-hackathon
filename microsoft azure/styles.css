@@ -1,0 +1,43 @@
+#searchbar{ 
+    margin-left: 15%; 
+    padding:15px; 
+    border-radius: 10px; 
+  } 
+
+  input[type=text] { 
+     width: 30%; 
+     -webkit-transition: width 0.15s ease-in-out; 
+     transition: width 0.15s ease-in-out; 
+  } 
+
+  input[type=text]:focus { 
+    width: 70%; 
+  } 
+
+ .body{
+     color: cadetblue;
+     
+ }
+  } 
+
+  .button {
+    background-color:burlywood;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px;
+    border-radius: 12px;
+    position: absolute;
+    padding-top: 15px;
+    
+  }
+  
+  
+  
+  
+  .button4 {border-radius: 12px;}
+  .button5 {border-radius: 50%;}
+  

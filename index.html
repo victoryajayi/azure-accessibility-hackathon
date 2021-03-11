@@ -62,6 +62,7 @@
   submitButton.onclick = getDirections();
 
   function getDirections(e) {
+    console.log('clicked');
     fetch(directionsAPI, {
       method: "GET",
       contentType: "application/json"
